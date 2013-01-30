@@ -44,21 +44,42 @@ __END__
 
 =head1 NAME
 
-Test::LogFile -
+Test::LogFile - Wrapper module for testing shared logfile
 
 =head1 SYNOPSIS
 
   use Test::LogFile;
 
+  my $file = log_file;
+
+  my $pid = fork();
+  if ($pid == 0) {
+    # run any worker
+  }
+  elsif ($pid) {
+    # wait for worker
+    sleep 2;
+    # testing
+    count_ok(
+      file  => $file,
+      str   => "any text for searching in logfile",
+      count => 1, # count that appear str arg in logfile
+      hook  => sub {
+          my $line = shift;
+          # other test when hitting str arg
+      }
+    );
+  }
+
 =head1 DESCRIPTION
 
-Test::LogFile is
+Test::LogFile is testing with shared logfile.
+
+This module aim testing worker, server, and any daemonize program with log output.
 
 =head1 AUTHOR
 
-Default Name E<lt>default {at} example.comE<gt>
-
-=head1 SEE ALSO
+Koji Takiguchi E<lt>kojiel {at} gmail.comE<gt>
 
 =head1 LICENSE
 
