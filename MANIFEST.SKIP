@@ -1,6 +1,8 @@
 \bRCS\b
 \bCVS\b
 ^MANIFEST\.
+^MYMETA.JSON$
+^MYMETA.YML$
 ^Makefile$
 ~$
 ^#
@@ -19,3 +21,4 @@
 ^\.shipit$
 ^\.git/
 \.sw[po]$
+^\.travis.yml$
