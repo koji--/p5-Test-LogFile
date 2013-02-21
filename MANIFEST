@@ -1,5 +1,8 @@
 .perl-version
 Changes
+eg/agent.pl
+eg/shrc
+eg/t/agent.t
 inc/Module/Install.pm
 inc/Module/Install/AuthorTests.pm
 inc/Module/Install/Base.pm
@@ -16,6 +19,8 @@ lib/Test/LogFile.pm
 Makefile.PL
 MANIFEST			This list of files
 META.yml
+MYMETA.json
+MYMETA.yml
 README.md
 t/00_compile.t
 t/01_log_file.t

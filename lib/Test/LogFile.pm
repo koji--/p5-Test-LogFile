@@ -5,7 +5,7 @@ use base qw(Exporter);
 use File::Temp qw(tempfile);
 use Test::More;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 our @EXPORT  = qw/
   log_file
   count_ok
@@ -48,6 +48,7 @@ Test::LogFile - Wrapper module for testing shared logfile
 
 =head1 SYNOPSIS
 
+  use Test::More;
   use Test::LogFile;
 
   my $file = log_file;
@@ -58,7 +59,11 @@ Test::LogFile - Wrapper module for testing shared logfile
   }
   elsif ($pid) {
     # wait for worker
-    sleep 2;
+    waitpid($pid, 0);
+
+    # kill worker
+    kill( 15, $pid );
+
     # testing
     count_ok(
       file  => $file,
@@ -69,6 +74,8 @@ Test::LogFile - Wrapper module for testing shared logfile
           # other test when hitting str arg
       }
     );
+
+    done_testing; # done_testing should be call in parent process only.
   }
 
 =head1 DESCRIPTION

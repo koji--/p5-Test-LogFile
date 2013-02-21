@@ -24,4 +24,4 @@ Test::LogFile documentation is available as in POD. So you can do:
 
 to read the documentation online with your favorite pager.
 
-Default Name
+Koji Takiguchi
