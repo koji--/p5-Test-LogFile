@@ -1,7 +1,7 @@
 ---
 abstract: 'Wrapper module for testing shared logfile'
 author:
-  - unknown
+  - 'Koji Takiguchi E<lt>kojiel at@ gmail.comE<gt>'
 build_requires:
   Test::More: 0.98
   Test::Requires: 0.06
@@ -20,10 +20,10 @@ no_index:
 provides:
   Test::LogFile:
     file: lib/Test/LogFile.pm
-    version: 0.03
+    version: 0.04
 requires:
   File::Temp: 0
   perl: 5.008001
 resources:
   license: http://dev.perl.org/licenses/
-version: 0.03
+version: 0.04

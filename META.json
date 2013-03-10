@@ -1,7 +1,7 @@
 {
    "abstract" : "Wrapper module for testing shared logfile",
    "author" : [
-      "unknown"
+      "Koji Takiguchi E<lt>kojiel at@ gmail.comE<gt>"
    ],
    "dynamic_config" : 0,
    "generated_by" : "Module::Build version 0.4003, CPAN::Meta::Converter version 2.120630",
@@ -40,7 +40,7 @@
    "provides" : {
       "Test::LogFile" : {
          "file" : "lib/Test/LogFile.pm",
-         "version" : "0.03"
+         "version" : "0.04"
       }
    },
    "release_status" : "stable",
@@ -49,5 +49,5 @@
          "http://dev.perl.org/licenses/"
       ]
    },
-   "version" : "0.03"
+   "version" : "0.04"
 }

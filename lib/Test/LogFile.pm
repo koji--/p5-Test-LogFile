@@ -5,7 +5,7 @@ use base qw(Exporter);
 use File::Temp qw(tempfile);
 use Test::More;
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 our @EXPORT  = qw/
   log_file
   count_ok
@@ -86,7 +86,7 @@ This module aim testing worker, server, and any daemonize program with log outpu
 
 =head1 METHODS
 
-=over
+=over 4
 
 =item log_file()
 
@@ -100,7 +100,7 @@ Testing with number of test string. This method is using Test::More for checking
 
 =head1 AUTHOR
 
-Koji Takiguchi E<lt>kojiel {at} gmail.comE<gt>
+Koji Takiguchi E<lt>kojiel at@ gmail.comE<gt>
 
 =head1 LICENSE
 

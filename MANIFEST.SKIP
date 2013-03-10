@@ -25,3 +25,4 @@
 .perl-version
 ^MYMETA\.yml$
 ^MYMETA\.json$
+^META\.yml$

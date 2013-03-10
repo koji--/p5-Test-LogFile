@@ -6,7 +6,6 @@ eg/t/agent.t
 lib/Test/LogFile.pm
 MANIFEST			This list of files
 META.json
-META.yml
 README
 t/00_compile.t
 t/01_log_file.t
@@ -20,3 +19,4 @@ xt/pod.t
 xt/podcoverage.t
 xt/podspell.t
 xt/podsynopsis.t
+META.yml
