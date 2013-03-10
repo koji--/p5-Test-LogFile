@@ -5,7 +5,7 @@ use base qw(Exporter);
 use File::Temp qw(tempfile);
 use Test::More;
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 our @EXPORT  = qw/
   log_file
   count_ok
@@ -51,7 +51,7 @@ Test::LogFile - Wrapper module for testing shared logfile
   use Test::More;
   use Test::LogFile;
 
-  my $file = log_file;
+  my $file = log_file();
 
   my $pid = fork();
   if ($pid == 0) {
@@ -83,6 +83,20 @@ Test::LogFile - Wrapper module for testing shared logfile
 Test::LogFile is testing with shared logfile.
 
 This module aim testing worker, server, and any daemonize program with log output.
+
+=head1 METHODS
+
+=over
+
+=item log_file()
+
+return temporary file path for log.
+
+=item count_ok()
+
+Testing with number of test string. This method is using Test::More for checking count.
+
+=back
 
 =head1 AUTHOR
 

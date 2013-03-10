@@ -22,3 +22,6 @@
 ^\.git/
 \.sw[po]$
 ^\.travis.yml$
+.perl-version
+^MYMETA\.yml$
+^MYMETA\.json$
